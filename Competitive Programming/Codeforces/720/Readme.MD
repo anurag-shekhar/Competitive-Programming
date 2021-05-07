@@ -1,1 +1,0 @@
-Codeforces Round #720 (Div. 2)

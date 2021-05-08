@@ -8,7 +8,10 @@ using namespace std;
 
 ll solve(ll n, ll m) {
     
-    for()
+    int x = (5%3)%2;
+    int y = (5%2)%3;
+
+    cout<<x<<" "<<y<<endl;
 }
 
 int main() {

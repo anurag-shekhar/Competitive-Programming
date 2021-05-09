@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : 1011.cpp
+ * Created on : Sun May 09 2021
+ ****************************************************************
+ */
+
 bool isValid(int i,int j, int r, int c)
 {
     if(i<r && j<c && i>=0 && j>=0)

@@ -1,3 +1,17 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : 173.cpp
+ * Created on : Sun May 09 2021
+ ****************************************************************
+ */
+
+
 int solve(int hour, int minutes) {
     hour %= 12;
     double hourDegree = (hour*30.0 + minutes*0.5);

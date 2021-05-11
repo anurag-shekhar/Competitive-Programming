@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : AddToArrayFormOfInteger.cpp
+ * Created on : Tue May 11 2021
+ ****************************************************************
+ */
+
 class Solution {
 public:
     vector<int> addToArrayForm(vector<int>& num, int k) {

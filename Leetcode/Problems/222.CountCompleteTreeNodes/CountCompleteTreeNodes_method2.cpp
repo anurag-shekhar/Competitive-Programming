@@ -6,7 +6,7 @@
  * Github : https://github.com/anurag-shekhar
  * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
  *
- * File Name : sol_dfs.cpp
+ * File Name : CountCompleteTreeNodes_method2.cpp
  * Created on : Wed May 12 2021
  ****************************************************************
  */
@@ -26,25 +26,29 @@
 class Solution {
 public:
     
-    void preorder(vector<vector<int> > &res,TreeNode* root,int level)
-    {
+    int countNodes(TreeNode* root) {
         if(!root)
-            return;
-        if(res.size() == level)
-            res.push_back({});
-        res[level].push_back(root->val);
-        preorder(res,root->left,level+1);
-        preorder(res,root->right,level+1);
-         
-    }
-    vector<vector<int>> levelOrder(TreeNode* root) {
-          
-        vector<vector<int> > res;
-        preorder(res,root,0);
-    
-        return res;
+            return 0;
         
+        TreeNode* l =  root, *r = root;
+        int lh = 0, rh =0;
+        while(l) 
+        {
+            l = l->left;
+            lh++;
+        }
+        while(r)
+        {
+            r = r->right;
+            rh++;
+        }
         
-        
+        if(lh == rh)
+        {
+            int localNodes = (1<<lh) -1;
+            return localNodes;
+        }
+        else 
+            return 1 + countNodes(root->left) + countNodes(root->right);
     }
 };

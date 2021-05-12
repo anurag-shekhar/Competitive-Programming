@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : MinimumAbsoluteSumDifference.cpp
+ * Created on : Wed May 12 2021
+ ****************************************************************
+ */
+
 #define MOD 1000000007
 #define ll long long int
 class Solution {

@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : KnightProbabilityInChessboard.cpp
+ * Created on : Wed May 12 2021
+ ****************************************************************
+ */
+
 #define ld long double
 bool isValid(int x, int y, int n)
 {

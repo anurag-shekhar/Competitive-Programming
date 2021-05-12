@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : TextJustification.cpp
+ * Created on : Wed May 12 2021
+ ****************************************************************
+ */
+
 class Solution {
 public:
     void stringBuilder(vector<string>& words, int start, int k, vector<string> &res)

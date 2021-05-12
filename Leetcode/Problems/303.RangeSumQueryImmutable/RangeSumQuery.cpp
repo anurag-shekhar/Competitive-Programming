@@ -1,3 +1,17 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : RangeSumQuery.cpp
+ * Created on : Wed May 12 2021
+ ****************************************************************
+ */
+
+
 class NumArray {
 public:
     vector<int> sums;

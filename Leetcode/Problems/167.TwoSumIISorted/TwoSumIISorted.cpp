@@ -1,3 +1,17 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : TwoSumIISorted.cpp
+ * Created on : Wed May 12 2021
+ ****************************************************************
+ */
+
+
 class Solution {
 public:
     int Bsearch(vector<int>& A,int left, int right, int target)

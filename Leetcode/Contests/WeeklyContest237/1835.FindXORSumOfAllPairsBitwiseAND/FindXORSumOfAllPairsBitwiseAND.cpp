@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : FindXORSumOfAllPairsBitwiseAND.cpp
+ * Created on : Thu May 13 2021
+ ****************************************************************
+ */
+
 class Solution {
 public:
     int getXORSum(vector<int>& arr1, vector<int>& arr2) {

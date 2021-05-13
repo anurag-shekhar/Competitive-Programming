@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : SplittingStringIntoDescendingConsecutiveValues.cpp
+ * Created on : Thu May 13 2021
+ ****************************************************************
+ */
+
 #define ll long long int
 class Solution {
 public:

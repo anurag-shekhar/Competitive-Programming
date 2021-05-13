@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : SeatReservationManager.cpp
+ * Created on : Thu May 13 2021
+ ****************************************************************
+ */
+
 class SeatManager {
 public:
     priority_queue<int, vector<int>, greater<int> > minHeap;

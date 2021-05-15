@@ -11,45 +11,51 @@
  ****************************************************************
  */
 
-
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         
-        int len = 0;
-        int left = 0, right = 0;
-        bool leftFlag = false, rightFlag = true;
-        unordered_map<char, int> m;
-        char check;
+        unordered_map<char,int> m;
+        bool check = true;
         
-        while(right <= s.size())
-        { 
-            if(rightFlag)
+        int left = 0, right = 0;
+        
+        int n =s.size();
+        int res = 0;
+        while(right<=n)
+        {
+            if(check) // valid
             {
-                if(right == s.size())
+                if(right==n)
                     break;
                 m[s[right]]++;
                 if(m[s[right]]==2)
-                {
-                    leftFlag = true;
-                    rightFlag = false;
-                    check = s[right];  
-                }  
-                else 
-                    len = max(len, right - left + 1);
+                    check = false;
                 right++;
+                if(check)
+                    res = max(res, right-left);
             }
-            else if(leftFlag)
+            else
             {
                 m[s[left]]--;
-                if(m[check] == 1)
-                {
-                    leftFlag = false;
-                    rightFlag = true;
-                }
+                if(m[s[left]]==1)
+                    check = true;
                 left++;
+                
             }
         }
-        return len;
+        return res;
+        
     }
 };
+/*
+x - be any char
+m[x] = 1 // valid
+
+
+m[x1] = 1
+m[x2] = 1
+m[x3] = 1
+
+
+

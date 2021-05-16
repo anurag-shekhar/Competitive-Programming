@@ -24,6 +24,9 @@
  */
 class Solution {
 public:
+    // -1 -> i'm not monitored
+    // 0  -> i'm covered
+    // 1 -> i have camera 
     int solve(TreeNode* root, int &cameras)
     {
         if(!root)

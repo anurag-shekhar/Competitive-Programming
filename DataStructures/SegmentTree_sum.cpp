@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : SegmentTree_sum.cpp
+ * Created on : Wed May 26 2021
+ ****************************************************************
+ */
+
 
 
 //A = input 
@@ -12,7 +25,7 @@
 1 <= idxTree <= 2n+1
 */
 
-(A, 1, 0, n-1)
+//(A, 1, 0, n-1)
 
 vector<int> SegTree(2n+2);
 

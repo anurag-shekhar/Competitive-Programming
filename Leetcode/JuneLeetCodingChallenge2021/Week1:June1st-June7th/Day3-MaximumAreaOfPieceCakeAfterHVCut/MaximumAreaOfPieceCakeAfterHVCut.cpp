@@ -7,38 +7,41 @@
  * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
  *
  * File Name : MaximumAreaOfPieceCakeAfterHVCut.cpp
- * Created on : Wed May 12 2021
+ * Created on : Thu Jun 03 2021
  ****************************************************************
  */
 
-#define ll long long
+#define MOD 1000000007
 class Solution {
 public:
-    int maxArea(int h, int w, vector<int>& hCuts, vector<int> vCuts) {
-            
-        hCuts.push_back(0);
-        hCuts.push_back(h);
-        vCuts.push_back(0);
-        vCuts.push_back(w);
+    int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {
         
-        sort(hCuts.begin(), hCuts.end());
-        sort(vCuts.begin(), vCuts.end());
+        horizontalCuts.push_back(0);
+        horizontalCuts.push_back(h);
+        sort(horizontalCuts.begin(), horizontalCuts.end());
         
-        int maxHeight = 0,maxWidth = 0;
         
-        for(int i=1; i<hCuts.size(); i++)
+        
+        verticalCuts.push_back(0);
+        verticalCuts.push_back(w);
+        sort(verticalCuts.begin(), verticalCuts.end());
+        
+        long maxH = 0, maxW = 0;
+        
+        int h_size = horizontalCuts.size();
+        for(int i = 1; i<h_size; i++)
         {
-            maxHeight = max(maxHeight, hCuts[i]-hCuts[i-1]);
+            maxH = max(maxH, (long)(horizontalCuts[i]-horizontalCuts[i-1]));
         }
-        for(int i=1; i<vCuts.size(); i++)
+        
+        int w_size = verticalCuts.size();
+        for(int i = 1; i<w_size; i++)
         {
-            
-            maxWidth = max(maxWidth, vCuts[i]-vCuts[i-1]);
+            maxW = max(maxW, (long)(verticalCuts[i]-verticalCuts[i-1]));
         }
-        //cout<<1e9;
-        int N = 1e9+7;
-        ll maxW = maxWidth%N;
-        ll maxH = maxHeight%N;
-        return (maxH*maxW)%N;
+        maxW = maxW%MOD;
+        maxH = maxH%MOD;
+        
+        return (maxW*maxH)%MOD;
     }
 };

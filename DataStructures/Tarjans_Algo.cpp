@@ -11,6 +11,7 @@
  ****************************************************************
  */
 
+
 vector<vector<int> > graph, res;
 vector<int> parent, discovery, lowestReach;
 int time;
@@ -37,3 +38,10 @@ void tarjan(int u)
         }
     }
 }
+
+/* #INTITIALISE
+parent = vector<int> (n,-1);
+discovery = vector<int> (n,-1);
+lowestReach = vector<int> (n,-1);
+time = 0;
+*/

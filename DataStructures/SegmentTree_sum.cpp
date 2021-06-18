@@ -64,7 +64,7 @@ void update(int v, int tl, int tr, int pos, int val)
     else 
     {
         int tm = (tl + tr)/2;
-        if(tm > pos)
+        if(tm >= pos)
             update(2*v, tl, tm, pos, val);
         else 
             update(2*v+1, tm+1, tr, pos, val);

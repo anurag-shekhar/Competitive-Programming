@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : sol.cpp
+ * Created on : Sat Jun 19 2021
+ ****************************************************************
+ */
+
 #include<bits/stdc++.h>
 #include<unordered_map>
 #include<unordered_set>
@@ -10,20 +23,16 @@ void solve(ll n,  vector<ll> &A) {
     
     sort(A.begin(), A.end());
 
-    vector<int> store;
+    vector<ll> store;
+    store.push_back(0);
+    store.push_back(1);
     for(int i = 0; i<n-1; i++)
     {
-        if(A[i] == A[i+1])
+        if(A[i+1] - A[i] < A[store[1]] - A[store[0]] )
         {
-            store.push_back(i);
-            store.push_back(i+1);
-            break;
+            store[0] = i;
+            store[1] = i+1;
         }
-    }
-    if(store.size()==0)
-    {
-        store.push_back(0);
-        store.push_back(1);
     }
 
     cout<<A[store[0]]<<" ";

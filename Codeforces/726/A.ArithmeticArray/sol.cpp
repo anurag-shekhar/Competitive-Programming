@@ -1,3 +1,16 @@
+/*
+ ****************************************************************
+ * Author : Anurag Shekhar
+ * Email : anurag.shekhar.work@gmail.com
+ *
+ * Github : https://github.com/anurag-shekhar
+ * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
+ *
+ * File Name : sol.cpp
+ * Created on : Sat Jun 19 2021
+ ****************************************************************
+ */
+
 #include<bits/stdc++.h>
 #include<unordered_map>
 #include<unordered_set>

@@ -7,35 +7,31 @@
  * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
  *
  * File Name : RotateArray.cpp
- * Created on : Fri Nov 05 2021
+ * Created on : Wed Jan 12 2022
  ****************************************************************
  */
 
 class Solution {
 public:
-    void reverse(vector<int>& nums, int left, int right)
+    
+    void rotate_helper(vector<int> &nums, int i, int j)
     {
-        while(left < right)
+        while(i<=j)
         {
-            int temp = nums[left];
-            nums[left] = nums[right];
-            nums[right] = temp;
-            right--;
-            left++;
-        }
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+            j--;
+        }   
     }
     void rotate(vector<int>& nums, int k) {
         
         int n = nums.size();
-        
         k = k%n;
-        
-        if(k==0)
-            return;
-        
-        reverse(nums, 0, n-1);
-        reverse(nums, 0, k-1);
-        reverse(nums,k, n-1);
-        
+        k = n-k;
+        rotate_helper(nums, 0, k-1);
+        rotate_helper(nums, k, n-1);
+        rotate_helper(nums, 0, n-1);
     }
 };

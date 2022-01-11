@@ -7,7 +7,7 @@
  * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
  *
  * File Name : SquaresOfSortedArray.cpp
- * Created on : Fri Nov 05 2021
+ * Created on : Wed Jan 12 2022
  ****************************************************************
  */
 
@@ -15,53 +15,47 @@ class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
         
-
-        
         int n = nums.size();
-        int leftPtr =-1, rightPtr = n;
+        int left = -1;
+        int right = n;
+        
         for(int i = 0; i<n; i++)
         {
-            if(nums[i]>=0)
+            if(nums[i] >= 0)
             {
-                leftPtr = i-1;
-                rightPtr = i;
+                left = i-1;
+                right = i;
                 break;
             }
-            leftPtr = i;
+            left = i;
         }
         
-        vector<int> res(n);
-        
-        for(int i = 0; i<n; i++)
+        vector<int> res;
+        while(left >= 0 && right < n)
         {
-            if(leftPtr > -1 && rightPtr < n)
+            if(-1* nums[left] >= nums[right])
             {
-                if(abs(nums[leftPtr]) < abs(nums[rightPtr]))
-                {
-                    res[i] = nums[leftPtr] * nums[leftPtr];
-                    leftPtr--;
-                }
-                else 
-                {
-                    res[i] = nums[rightPtr] * nums[rightPtr];
-                    rightPtr++;
-                }
+                res.push_back(nums[right] * nums[right]);
+                right++;
             }
-            else if(leftPtr > -1)
+            else
             {
-                res[i] = nums[leftPtr] * nums[leftPtr];
-                leftPtr--;
+                res.push_back(nums[left] * nums[left]);
+                left--;
             }
-            else 
-            {
-                res[i] = nums[rightPtr] * nums[rightPtr];
-                rightPtr++;
-            }
-                
+        }
+        
+        while(left >= 0)
+        {
+            res.push_back(nums[left] * nums[left]);
+            left--;
+        }
+        
+        while(right < n)
+        {
+            res.push_back(nums[right] * nums[right]);
+            right++;
         }
         return res;
-        
-        
-        
     }
 };

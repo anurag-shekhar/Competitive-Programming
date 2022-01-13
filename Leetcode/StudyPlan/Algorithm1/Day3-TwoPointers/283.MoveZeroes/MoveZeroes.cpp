@@ -13,19 +13,20 @@
 
 class Solution {
 public:
-    void moveZeroes(vector<int>& nums) {
+    vector<int> twoSum(vector<int>& numbers, int target) {
         
-        int lastInsertedPtr = -1;
-        int ptr = 0;
+        int left = 0, right = numbers.size()-1;
         
-        int n  = nums.size();
-        while( ptr < n)
+        while(left < right)
         {
-            if(nums[ptr] != 0)
-                nums[++lastInsertedPtr] = nums[ptr];
-            if(lastInsertedPtr != ptr)
-                nums[ptr] = 0;
-            ptr++;
+            int val = numbers[left] + numbers[right]; 
+            if(numbers[left] + numbers[right] == target)
+                return {left+1, right+1};
+            else if(val < target)
+                left++;
+            else 
+                right--;
         }
+        return {};
     }
 };

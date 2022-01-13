@@ -7,20 +7,21 @@
  * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
  *
  * File Name : ReverseString.cpp
- * Created on : Fri Nov 05 2021
+ * Created on : Fri Jan 14 2022
  ****************************************************************
  */
 
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-       
-        int left = 0;
-        int right = s.size()-1;
         
-        while(left <= right)
+        int left = 0, right = s.size()-1;
+        char ch;
+        while(left < right)
         {
-            swap(s[left], s[right]);
+            ch = s[left];
+            s[left] = s[right];
+            s[right] = ch;
             left++;
             right--;
         }

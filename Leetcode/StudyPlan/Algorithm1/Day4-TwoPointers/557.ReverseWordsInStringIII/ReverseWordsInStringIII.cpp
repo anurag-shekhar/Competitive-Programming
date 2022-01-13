@@ -7,35 +7,36 @@
  * LinkedIn : https://www.linkedin.com/in/anurag-shekhar/
  *
  * File Name : ReverseWordsInStringIII.cpp
- * Created on : Fri Nov 05 2021
+ * Created on : Fri Jan 14 2022
  ****************************************************************
  */
 
 class Solution {
 public:
-    void reverse(string &s, int left, int right)
+    
+    void reverse(string &s, int start, int end)
     {
-        while(left<=right)
+        while(start <= end)
         {
-            swap(s[left], s[right]);
-            left++;
-            right--;
+            char ch = s[start];
+            s[start] = s[end];
+            s[end] = ch;
+            start++;
+            end--;
         }
     }
     string reverseWords(string s) {
         
-        int left = 0;
-        
+        int ptr = 0;
         int n = s.size();
-        for(int i = 0; i<n; i++)
+        while(ptr < n)
         {
-            if(s[i]==' ')
-            {
-                reverse(s, left, i-1);
-                left = i+1;
-            }
+            int start = ptr; 
+            while(ptr<n && s[ptr] != ' ')
+                ptr++;
+            reverse(s, start, ptr-1);
+            ptr++;
         }
-        reverse(s, left, n-1);
         return s;
     }
 };

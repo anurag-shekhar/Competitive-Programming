@@ -25,7 +25,7 @@ public:
         int c = grid[0].size();
         vector<vector<vector<bool> > > visited(r, vector<vector<bool> > (c, vector<bool> (k+1,false)));
         
-        queue<vector<int> > q;
+        queue<vector<int> > q; //{x, y, number of k remaining, steps}
         int dx[] = {-1,1,0,0};
         int dy[] = {0,0,-1,1};
         q.push({0,0,k,0});
@@ -37,6 +37,8 @@ public:
             
             if(cell[0] == r-1 && cell[1]==c-1)
                 return cell[3];
+
+            //visited[cell[0]][cell[1]][cell[2]] = true; TLE
             
             for(int k = 0; k<4; k++)
             {

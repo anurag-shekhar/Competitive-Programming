@@ -39,7 +39,6 @@ public:
                 }
             }
             idx++;
-            cout<<token<<endl;
             if(!flag2)
                 hayStack.insert(token);
             else {

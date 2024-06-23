@@ -1,0 +1,33 @@
+{
+    "fileHeaderComment.parameter":{
+        "*":{
+            "commentBegin": "/*",
+            "commentLine":" ****************************************************************",
+            "commentprefix": " *",
+            "commentend": " */",
+            "git": "https://github.com/anurag-shekhar",
+            "linkedIn": "https://www.linkedin.com/in/anurag-shekhar/",
+            "email":"anurag.shekhar.work@gmailcom",
+            "author": "Anurag Shekhar"
+
+        }
+    },
+    "fileHeaderComment.template":{
+        
+
+        "*":[
+            "${commentBegin}",
+            "${commentLine}",
+            "${commentprefix} Author : ${author}",
+            "${commentprefix} Email : ${email}",
+            "${commentprefix}",
+            "${commentprefix} Github : ${git}",
+            "${commentprefix} LinkedIn : ${linkedin}",
+            "${commentprefix}",
+            "${commentprefix} File Name : ${filename}",
+            "${commentprefix} Created on : ${date}",
+            "${commentLine}",
+            "${commentend}"
+        ]
+    }
+}
